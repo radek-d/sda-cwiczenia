@@ -12,7 +12,12 @@
  */
 
 var files = ["obrazek.jpg", "avatar.png", "cv.pdf", "finanse.xls", "a.jpg.exe"];
-// var types = 
+
+var imageTypes = ["jpg", "png", "psd"];
+var documentTypes = ["doc", "txt", "xls", "pdf"];
+var appTypes = ["exe", "bat"];
+
+
 files.forEach( element => {
     showType(element);
  });
@@ -20,22 +25,16 @@ files.forEach( element => {
 function showType(fileName) {
     var result;
     var type = getType(fileName);
-    switch (type) {
-        case "jpg":
-        case "png":
-        case "psd":
-            result = "obraz";
-            break
-        case "doc":
-        case "txt":
-        case "xls":
-        case "pdf":
-            result = "dokument"
-            break
-        case "exe":
-        case "bat":
-            result = "aplikacja"
-            break
+    if (imageTypes.indexOf(type) > -1){
+        result = "obrazek"
+    }
+
+    if (documentTypes.indexOf(type) > -1){
+        result = "document"
+    }
+
+    if (appTypes.indexOf(type) > -1){
+        result = "app"
     }
     console.log (fileName, "jest typu", result);
 
