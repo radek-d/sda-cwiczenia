@@ -1,1 +1,1 @@
-var slowa = ["sos", "test", "zaraz", "dwa", "oko"];
+var word = ["sos", "test", "zaraz", "dwa", "oko"];
