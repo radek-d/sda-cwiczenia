@@ -1,0 +1,1 @@
+var slowa = ["sos", "test", "zaraz", "dwa", "oko"];
